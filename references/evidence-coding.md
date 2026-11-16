@@ -31,6 +31,28 @@ These are the most common ways a deck lies without inventing a number:
 5. **Mention transfer:** "the sun was strong" treated as a decision-changing constraint, even though nobody changed time, place, or gear.
 6. **Sample transfer:** friends and design students used as a representative sample.
 
+## What a source can support
+
+Match the claim to the source type. A source that supports one sentence often cannot support the next:
+
+| Source | Can support | Cannot support |
+|---|---|---|
+| Price / product page | The substitute exists; a price anchor; listed features | Demand, willingness to pay, actual use |
+| Participatory design workshop | Participants' expectations, vocabulary, design directions | Effect, adoption, behaviour change |
+| Lab experiment | A measured effect in that task and sample | Real-world retention or a different outcome |
+| Public post with photos | A visible setup or one occasion | Frequency, representativeness, city-wide rule |
+| Self-report / testimonial | How someone describes the problem | What they actually do or will pay |
+| Meta-analysis | An average effect with heterogeneity | A specific product's effect or a causal claim outside the included studies |
+
+When a source only proves existence, write "exists" or "is listed", not "there is demand" or "users will pay".
+
+## Metric rules
+
+- Prefer a **rate** over a raw count: `events ÷ eligible opportunities`.
+- Report both the raw count and the rate; a busy week can inflate a count and make an intervention look effective.
+- If the baseline is zero, relative lift `(B − A) / A` is undefined. Report the **percentage-point difference** instead.
+- Pre-register the comparison, metric, and calculation before the test; do not choose the metric after seeing the result.
+
 ## Mention vs decision-changing constraint
 
 A constraint counts only when it changes a choice:

@@ -29,7 +29,7 @@ Use when an early-stage project needs one of these:
 - stress-test a concept before making a deck, logo, packaging, or campaign;
 - run a "grill me" review that must end in a decision;
 - run a multi-batch campaign around one topic, produce many concepts, and select the best (see `references/long-run-mode.md`);
-- package a stage-one brand story from constraints and public evidence.
+- package a stage-one brand story for non-AI readers: one-page brief, 8-page proposal, evidence/risk;
 
 Do not use for visual identity execution, production CAD, or campaign media buying. Those come after positioning.
 
@@ -107,6 +107,31 @@ delivery/
 ```
 
 Course mode adds the course fields to the full-positioning package; it does not change the format. A single-grill request still stops at the grill log.
+
+## Front-stage output
+
+For students and other non-AI readers, add a human-facing layer **without changing the method**. The nine gates, 5–8 directions, grill, and kill criteria stay exactly as they are.
+
+```
+delivery/
+  00_先读我.md             1 screen: chat-style entry, how to read, biggest unknown
+  01_ONE_PAGE.pdf          1 page: recommendation, who, why, biggest risk
+  02_8PAGE_PROPOSAL.pdf    the selected direction, one question per page
+  03_EVIDENCE_RISK.pdf     what we saw / what we inferred / what is unverified
+  04_IDEA_APPENDIX.pdf     optional: the 5–8 directions already produced in Gate 2
+work/
+  A_SCAN.md ... E_KILL_MEMO.md
+```
+
+Rules:
+
+- PDF/PPTX for the front stage; Markdown stays in `work/`.
+- No `claim`, `grill`, `kill criteria`, `[observed]`, or `[assumption]` in the student-facing PDF.
+- Use 我们看到的 / 我们的判断 / 还没验证的 / 什么情况下放弃.
+- Use green = public source/verified; yellow = inference/single source; grey = assumption.
+- The optional idea appendix shows the existing 5–8 directions; it does **not** add a 48-seed divergence method.
+
+Use `references/front-stage-output.md`.
 
 ## Workflow: nine gates
 
@@ -292,6 +317,7 @@ Do not invent local interviews. Ask for real observations, weights, photos, scre
 - End with one concrete next action and a file path.
 - In grill mode, end with the minimum evidence needed for the next round, not encouragement.
 - In campaign mode, report the funnel counts and the current phase; do not declare a winner before the blind review.
+- In front-stage mode, start with a chat-style note: what you did, the one-sentence conclusion, how to read it, the biggest unknown, and the next action. Mirror it in `00_先读我.md`.
 
 ## Guardrails
 
@@ -316,9 +342,11 @@ Do not invent local interviews. Ask for real observations, weights, photos, scre
 - `references/deck-outline.md` — 8-page deck map and page rules.
 - `references/minimal-input-mode.md` — topic-only input, research budget, source hierarchy.
 - `references/long-run-mode.md` — multi-batch campaign, funnel, blind tournament, stop rules.
+- `references/front-stage-output.md` — one-page/8-page/evidence-risk layer for non-AI readers.
 - `templates/claim-one-pager.md` — one-page claim template.
 - `templates/concept-card.md` — one-page concept card for a campaign database.
 - `templates/decision-brief.md` — universal one-page delivery brief.
+- `templates/read-me-first.md` — chat-style entry page for non-AI readers.
 - `templates/kill-memo.md` — kill memo template.
 - `templates/decision-log.md` — grill decision log.
 - `templates/source-table.md` — sources, assumptions, counterexamples.
@@ -332,3 +360,11 @@ Do not invent local interviews. Ask for real observations, weights, photos, scre
 A failed hard-shell picnic box was reduced to a connector, then killed by a two-ziplock baseline. The reusable insight was not the box; it was the **initiator/companion** distinction. A later direction used a park rule (pegs/ropes banned, tents allowed) plus the initiator's hosting job to form a no-pegs/no-ropes two-person shade promise. The deck was built only after the claim survived; the failed concept stayed in the kill memo.
 
 Use the pattern, not the product.
+
+## Packaging this skill
+
+- Keep the ZIP filename versioned, but fix the top-level folder inside the archive to `idea-to-positioning/`; install commands must use that exact name.
+- Test the archive by extracting it and running the README copy command; do not trust the folder name by eye.
+- Keep the human author/copyright holder separate from the tool credit; Hermes Agent is a collaborator, not the copyright holder.
+- Do not ship `.git`, caches, or absolute paths; run a ZIP integrity test and a reference check.
+- Keep README, SKILL.md, references, and the filled example on the same thresholds and delivery modes.

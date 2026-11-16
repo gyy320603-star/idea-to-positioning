@@ -49,6 +49,27 @@ No fabricated interviews. No invented prices. No “no one does this” absolute
 
 **Default rule:** full positioning gets 8 pages. A one-page brief is a separate mode and happens only when the user explicitly asks for one page.
 
+## Front-stage output
+
+For students, teachers, and other non-AI readers, add a readable front stage without changing the method:
+
+```
+delivery/
+  00_先读我.md             1 screen: chat-style entry, how to read, biggest unknown
+  01_ONE_PAGE.pdf          1 page: recommendation, who, why, biggest risk
+  02_8PAGE_PROPOSAL.pdf    the selected direction, one question per page
+  03_EVIDENCE_RISK.pdf     what we saw / what we inferred / what is unverified
+  04_IDEA_APPENDIX.pdf     optional: the 5–8 directions already produced in Gate 2
+work/
+  A_SCAN.md ... E_KILL_MEMO.md
+```
+
+The chat-style entry is not a table of contents. It says what was done, the one-sentence conclusion, how to read it (30 sec / 3 min / 15 min), what is still unsolved, and the next cheapest action.
+
+No `claim`, `grill`, `kill criteria`, `[observed]`, or `[assumption]` in the student-facing PDF. Use 我们看到的 / 我们的判断 / 还没验证的 / 什么情况下放弃.
+
+PDF/PPTX for the front stage; Markdown only for the workbench.
+
 ## Full package
 
 ```
@@ -143,6 +164,10 @@ skill_view(name="idea-to-positioning")
 我只要一页：<topic>。给我 decision brief 和来源表，不要 deck。
 ```
 
+```text
+把这次产出整理成学生能看的前台版：00_先读我 + 一页结论 + 八页提案 + 依据与风险。
+```
+
 ## Files
 
 ```
@@ -159,12 +184,14 @@ references/
   deck-outline.md
   minimal-input-mode.md
   long-run-mode.md
+  front-stage-output.md
 templates/
   claim-one-pager.md
   concept-card.md
   decision-brief.md
   decision-log.md
   kill-memo.md
+  read-me-first.md
   source-table.md
 examples/
   ai-cognitive-robot/

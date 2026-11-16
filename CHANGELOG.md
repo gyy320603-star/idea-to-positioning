@@ -17,4 +17,5 @@
 - Filled example with decision brief, deck outline, grill log, and sources.
 - Example evidence downgraded: HKUST is expectation/design research, Brick is a substitute/price anchor, not proof of willingness to pay.
 - Primary metric changed to first-answer-before-AI rate, with count and ratio reported; percentage-point difference when baseline is zero.
+- Front-stage output layer for students/non-AI readers: `00_先读我.md`, one-page conclusion, 8-page proposal, evidence/risk; optional 5–8 direction idea appendix. Method unchanged.
 - macOS and Windows install instructions.
