@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 — 2026-11-16
+
+- Split the skill entry point from the detailed positioning workflow. The entry point routes each request to its procedure. [Positioning workflow](references/workflow.md)
+- Documented which packaged templates each mode reads and where the resulting files belong in the user's project. [Project output paths](references/outputs.md)
+- Added a source-checkout command to check documentation and build the versioned install ZIP. The packaging check extracts the archive, copies it into a temporary Hermes skills directory, and verifies the installed files. [Release instructions](README.md#check-and-package-a-release)
+
 ## 1.0.0 — 2026-11-15
 
 - Initial release.

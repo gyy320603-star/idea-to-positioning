@@ -2,6 +2,8 @@
 
 Use this when a concept, positioning, or deck must survive adversarial review. The purpose is not to sound tough; it is to force a decision.
 
+Start with the strongest disconfirming question. The [question bank](question-bank.md) supplies prompts for particular claims and sources.
+
 ## Roles
 
 One person can wear all hats, but write the hat down so the voices do not blur.
@@ -59,6 +61,8 @@ Ask:
 
 ## Rounds
 
+Use the rounds that apply to the material under review. A grill-only request can start from a claim alone. Review a deck when one exists.
+
 ### Round 1 — Claim
 
 - Advocate reads the one-page claim.
@@ -101,16 +105,11 @@ A grill is valuable only if at least one of these happens:
 
 If the debate was sharp but nothing changed, it was theatre.
 
-## Output files
+## Decision record
 
-```
-CLAIM.md
-EVIDENCE.md
-KILL_MEMO.md
-DECISION_LOG.md
-```
+Use the [decision-log template](../templates/decision-log.md) as the input for the project's grill record. Record the sentence to delete and the decision to change. For a single grill, deliver one page covering the verdict, strongest challenge, evidence status, deleted sentence, decision, kill criteria, and minimum next evidence. Include a reframe when it changes the decision. Seek real observations, measurements, photos, screenshots, or test results to resolve the weakest link.
 
-Use the templates in `templates/`.
+The [output paths](outputs.md) specify where the completed record belongs for each mode.
 
 ## Tone
 

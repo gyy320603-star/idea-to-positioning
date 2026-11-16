@@ -25,6 +25,8 @@ Do not run a campaign 24/7. Marginal quality falls, cost rises, and the output b
 
 ## Campaign folder
 
+Create this structure in the project campaign directory specified by [output paths](outputs.md).
+
 ```
 campaign/
   DOSSIER.md          topic, constraints, rubric, confirmed decisions
@@ -70,7 +72,7 @@ Every concept is one card, not an essay. Minimum fields:
 - status: raw / shortlist / evidence / one-pager / finalist / killed;
 - kill reason or next test.
 
-Use `templates/concept-card.md`.
+Use the [concept-card template](../templates/concept-card.md) as input when creating campaign records.
 
 ## Divergence lenses
 

@@ -10,7 +10,7 @@ Use this when the user gives only a topic, or a topic plus a scene/persona hypot
 | 2 | Topic + scene/persona | Treat the hypothesis as `[assumption]`; test it; keep, narrow, or reject. |
 | 3 | Topic + links | Use the links first, supplement, record dates. |
 
-Never ask the user to supply inputs 3, 4, or 5 just to start.
+A topic suffices to start. Evaluation criteria, group decisions, and links can be added when available.
 
 ## Default behaviour
 

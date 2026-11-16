@@ -2,7 +2,7 @@
 
 **Turn a topic or concept into a defensible position.**
 
-Version 1.0.0 · MIT · Author: Yuyang Gong (龚雨旸)
+Version 1.0.1 · MIT · Author: Yuyang Gong (龚雨旸)
 
 ## What it is
 
@@ -49,57 +49,13 @@ No fabricated interviews. No invented prices. No “no one does this” absolute
 
 **Default rule:** full positioning gets 8 pages. A one-page brief is a separate mode and happens only when the user explicitly asks for one page.
 
-## Front-stage output
+## Workflow and deliverables
 
-For students, teachers, and other non-AI readers, add a readable front stage without changing the method:
+The gates take a topic from a scene and its constraints through concept screening, evidence review, positioning, and a decision to continue, narrow, pivot, or stop. Each gate lists the questions to answer and when to move forward. [Positioning workflow](references/workflow.md)
 
-```
-delivery/
-  00_先读我.md             1 screen: chat-style entry, how to read, biggest unknown
-  01_ONE_PAGE.pdf          1 page: recommendation, who, why, biggest risk
-  02_8PAGE_PROPOSAL.pdf    the selected direction, one question per page
-  03_EVIDENCE_RISK.pdf     what we saw / what we inferred / what is unverified
-  04_IDEA_APPENDIX.pdf     optional: the 5–8 directions already produced in Gate 2
-work/
-  A_SCAN.md ... E_KILL_MEMO.md
-```
+For each request mode, the output table identifies the template to read and the destination to write in the user's project. Keep the installed templates available for the next run. [Project output paths](references/outputs.md)
 
-The chat-style entry is not a table of contents. It says what was done, the one-sentence conclusion, how to read it (30 sec / 3 min / 15 min), what is still unsolved, and the next cheapest action.
-
-No `claim`, `grill`, `kill criteria`, `[observed]`, or `[assumption]` in the student-facing PDF. Use 我们看到的 / 我们的判断 / 还没验证的 / 什么情况下放弃.
-
-PDF/PPTX for the front stage; Markdown only for the workbench.
-
-## Full package
-
-```
-delivery/
-  00_DECISION_BRIEF.md     1 page: verdict, claim, Who, gap, What, How, kill criteria
-  01_DECK_OUTLINE.md       8 pages: one question per page
-  02_GRILL_LOG.md          1 page: challenges, deletions, decision
-  03_SOURCES.md            sources, assumptions, counterexamples
-appendix/
-  A_SCAN.md
-  B_CONCEPTS.md
-  C_SCORECARD.md
-  D_EVIDENCE.md
-  E_KILL_MEMO.md
-```
-
-## Workflow
-
-| Gate | Action | Output |
-|---|---|---|
-| 0 Frame | Category, scene, constraints, evaluation criteria, confirmed vs assumed | `01_frame.md` |
-| 1 Scan | Rules, rituals, substitutes, workarounds, complaints | `02_opportunity_map.md` |
-| 2 Diverge | 5–8 concepts, each a falsifiable claim | `03_concepts.md` |
-| 3 Score/Kill | Score, pre-register kill criteria, write kill memos | `04_scorecard.md`, `05_kill_memo.md` |
-| 4 Observe | Public evidence or real behaviour; label every claim | `06_evidence.md` |
-| 5 Position | Who by behaviour, substitute, gap, one promise, How | `07_positioning.md` |
-| 6 Prove | Competitors, SWOT, “what would falsify this” | `08_proof.md` |
-| 7 Package | 8-page outline by default; one page only on explicit request | `09_deck_outline.md` |
-| 8 Grill | Claim, evidence, deck; max three rounds | `10_grill.md` |
-| 9 Decide | Continue / narrow / pivot / kill | `11_decision.md` |
+For students and teachers, open with a short reading guide that states the recommendation, the biggest unknown, and the next cheapest action. Present the proposal and evidence in plain language, with working notes available separately. [Front-stage guide](references/front-stage-output.md)
 
 ## Evidence thresholds
 
@@ -121,7 +77,7 @@ appendix/
 
 ## Install
 
-The ZIP contains a single top-level folder named `idea-to-positioning/`. Unzip it first, then copy that folder.
+For the v1.0.1 GitHub release, select the asset named `idea-to-positioning-1.0.1.zip`. Unzip it, then run the commands below from the directory containing the extracted `idea-to-positioning/` folder. [GitHub releases](https://github.com/gyy320603-star/idea-to-positioning/releases)
 
 **macOS**
 
@@ -168,43 +124,29 @@ skill_view(name="idea-to-positioning")
 把这次产出整理成学生能看的前台版：00_先读我 + 一页结论 + 八页提案 + 依据与风险。
 ```
 
-## Files
+## Repository guide
 
+Start with the [skill entry point](SKILL.md) to see which procedure each request triggers. The [references](references/) explain the method and the [templates](templates/) supply the working forms.
+
+## Check and package a release
+
+From a source checkout, run the documentation checks with Python 3.9 or later.
+
+```bash
+python3 scripts/check.py
 ```
-SKILL.md
-README.md
-LICENSE
-CHANGELOG.md
-CONTRIBUTORS.md
-references/
-  grill-protocol.md
-  question-bank.md
-  evidence-coding.md
-  positioning-canvas.md
-  deck-outline.md
-  minimal-input-mode.md
-  long-run-mode.md
-  front-stage-output.md
-templates/
-  claim-one-pager.md
-  concept-card.md
-  decision-brief.md
-  decision-log.md
-  kill-memo.md
-  read-me-first.md
-  source-table.md
-examples/
-  ai-cognitive-robot/
-    README.md
-    00_DECISION_BRIEF.md
-    01_DECK_OUTLINE.md
-    02_GRILL_LOG.md
-    03_SOURCES.md
+
+To run the checks, build the installable ZIP, and verify its contents after extraction, run this command.
+
+```bash
+python3 scripts/check.py --package dist
 ```
+
+For version 1.0.1, attach `dist/idea-to-positioning-1.0.1.zip` to the GitHub release tagged `v1.0.1`. Keep the asset name `idea-to-positioning-1.0.1.zip` and the top-level folder `idea-to-positioning/`.
 
 ## Example
 
-`examples/ai-cognitive-robot/` is a filled topic-only run. It narrows a broad “anti-AI dependence robot” into a testable “think-first gate.”
+The worked example starts with a topic and narrows a broad “anti-AI dependence robot” into a testable “think-first gate.” [Example brief and sources](examples/ai-cognitive-robot/README.md)
 
 The 30% adherence threshold is a **proposed relative test threshold**, not a validated result. The example states the comparator, metric, and calculation:
 
